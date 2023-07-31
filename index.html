@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"> <!--HTML tag that is used to indicate the web page's character encoding-->
+        <meta http-equiv="X-UA Compatible" content="IE=edge"> <!--Ensures that IE uses the latest available rendering engine to render a web page, helping to ensure compatibility with modern web standards and features.-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Viewport meta tag lets you set the width and scaling of the viewport so that it's correctly sized on all devices-->
+        <link rel="stylesheet" href="style.css"> <!--The rel attribute defines the relationship between the current page and the linked page or resource. The URL for the CSS stylesheet is specified by the href attribute.-->
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    
+        <title>Online Calculator</title> 
+    </head>
+    <body>
+        <div class="holder">
+            <div class="calculator">
+                <form>
+                    <div class="display">
+                        <input type="text" name="display"> 
+                    </div>
+                    <div>
+                        <input type="button" value="AC" onclick="display.value = '' " class="operation">
+                        <input type="button" value="DE" onclick="display.value = display.value.toString().slice(0,-1) " class="operation">
+                        <input type="button" value="%" onclick="display.value += '%' " class="operation">
+                        <input type="button" value="/" onclick="display.value += '/' " class="operation">
+                    </div>
+                    <div> 
+                        <input type="button" value="7" onclick="display.value += '7' "> <!-- "+="" This is a shorthand operator that appends the value on the right to the current value on the left.-->
+                        <input type="button" value="8" onclick="display.value += '8' ">
+                        <input type="button" value="9" onclick="display.value += '9' ">
+                        <input type="button" value="*" onclick="display.value += '*' " class="operation">
+                    </div>
+                    <div>
+                        <input type="button" value="4" onclick="display.value += '4' ">
+                        <input type="button" value="5" onclick="display.value += '5' ">
+                        <input type="button" value="6" onclick="display.value += '6' ">
+                        <input type="button" value="-" onclick="display.value += '-' " class="operation">
+                    </div>
+                    <div>
+                        <input type="button" value="1" onclick="display.value += '1' ">
+                        <input type="button" value="2" onclick="display.value += '2' ">
+                        <input type="button" value="3" onclick="display.value += '3' ">
+                        <input type="button" value="+" onclick="display.value += '+' " class="operation">
+                    </div>
+                    <div>
+                        <input type="button" value="00" onclick="display.value += '00' " class="operation">
+                        <input type="button" value="0" onclick="display.value += '0' " class="operation">
+                        <input type="button" value="." onclick="display.value += '.' " class="operation">
+                        <input type="button" value="=" onclick="display.value = eval(display.value)" class="operation">
+                    </div>
+                </form>
+            </div>
+            <i class='bx bx-calculator calculator_symbol'></i>
+            <i class='bx bx-plus plus'></i>
+            <i class='bx bx-minus minus' ></i>
+            <i class='bx bx-math maths' ></i>
+            <i class='bx bx-infinite infinity'></i>
+            <i class='bx bx-cross cross'></i>
+            <i class='bx bx-home-alt-2 home' ></i>
+
+
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-percent percent" viewBox="0 0 16 16">
+                <path d="M13.442 2.558a.625.625 0 0 1 0 .884l-10 10a.625.625 0 1 1-.884-.884l10-10a.625.625 0 0 1 .884 0zM4.5 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm0 1a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5zm7 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm0 1a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z"/>
+            </svg>
+
+
+
+
+
+
+        </div>
+        <i class="bi bi-arrow-left-short"></i>
+    </body>
+</html>
